@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sorts+Mill+Goudy:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="#" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/style.css" />
+    <title>Document</title>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "-6DD7AHXUQMTTMkA4",
+        });
+      })();
+    </script>
+  </head>
+  <body>
+    <div class="contactCont">
+      <header>
+        <nav>
+          <a href="/index.html">Home</a>
+          <a href="/about.html">About</a>
+          <a class="active">Contact</a>
+          <a href="./prediction.html">Start Prediction</a>
+        </nav>
+        <a href="/index.html">
+          <img src="/images/untitledh-removebg-preview-2.png" alt="" />
+        </a>
+      </header>
+      <div class="cont">
+        <p class="contactTitle">Contact us</p>
+        <form id="contactForm" class="box">
+          <h2>We’re here to help you</h2>
+          <hr />
+          <input
+            placeholder="Enter your name"
+            type="text"
+            name="from_name"
+            id="from_name"
+          />
+          <input
+            placeholder="Enter your email"
+            type="email"
+            name="email"
+            id="email"
+          />
+
+          <textarea
+            placeholder="Write your message"
+            type="tel"
+            name="message"
+            id="message"
+            required
+            cols="30"
+            rows="5"
+          ></textarea>
+          <button id="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+  </body>
+  <script src="./contact.js"></script>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="/style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="#" />
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Sorts+Mill+Goudy:ital@0;1&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap"
+    rel="stylesheet"
+  />
+  <title>Document</title>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="/index.html">Home</a>
+      <a href="/about.html">About</a>
+      <a href="./contact.html">Contact</a>
+      <a class="active">Start Prediction</a>
+    </nav>
+    <a href="/index.html">
+      <img src="/images/untitledh-removebg-preview-2.png" alt="" />
+    </a>
+  </header>
+  <div>
+    <h2 class="welcome">
+      Welcome
+      <p id="name"></p>
+    </h2>
+    <div class="prediction">
+      <form id="predictionForm"  method="POST" action="/predict-insurance-amount"> <!-- Added action="/predict-insurance-amount" -->
+        <div>
+          <div>
+            <label class="red" for="age">Age</label>
+            <input required  id="age" name="age" />
+          </div>
+          <div>
+            <label class="red" for="children">Children</label>
+            <input required id="children" type="number" />
+          </div>
+        </div>
+        <div>
+          <div>
+            <label class="red" for="Bmi">Bmi</label>
+            <input required type="number" id="Bmi" name="Bmi" />
+          </div>
+
+          <div>
+            <label class="red" for="region">Region</label>
+
+            <select required name="region" id="region">
+              <option disabled selected value="">Select your region</option>
+              <option value="1">Southwest</option>
+              <option value="2">Southeast</option>
+              <option value="3">Northwest</option>
+              <option value="4">Northeast</option>
+            </select>
+          </div>
+        </div>
+        <div class="radio">
+          <div>
+            <label class="red">Smoker</label>
+            <div>
+              <div class="smokerOption">
+                <input
+                  type="radio"
+                  id="smokerYes"
+                  name="smoker"
+                  value="1"
+                />
+                <label for="smokerYes">Yes</label><br />
+              </div>
+              <div class="smokerOption">
+                <input
+                  required
+                  type="radio"
+                  id="smokerNo"
+                  name="smoker"
+                  value="0"
+                />
+                <label for="smokerNo">No</label><br />
+              </div>
+            </div>
+          </div>
+          <div>
+            <label class="red">Sex</label>
+            <div>
+              <div class="sexOption">
+                <input type="radio" id="female" name="sex" value="1" />
+                <label for="1">female</label><br />
+              </div>
+              <div class="sexOption">
+                <input
+                  required
+                  type="radio"
+                  id="male"
+                  name="sex"
+                  value="0"
+                />
+                <label for="0">male</label><br />
+              </div>
+            </div>
+          </div>
+        </div>
+        <button id="prophesyCost" type="submit">Prophesy</button>
+        <br>
+      </form>
+      <section id="result" class="result">
+        <hr />
+        <p>Your expected insurance amount</p>
+        <div class="amount">
+          <img src="/images/green cir.svg" alt="" />
+          <h2>
+            <div id="predictionResult">Prediction will be displayed here</div>
+          </h2>
+        </div>
+        <div>
+          <p>Total Paid</p>
+           <div  class="num" id="predictionResult2">Prediction will be displayed here</div>
+        </div>
+        <div>
+          <p>Using</p>
+          <div class="num2" id="predictionResult3">Prediction will be displayed here</div>
+        </div>
+
+        <a href="/index.html">
+          <button  class="small">Home</button>
+        </a>
+      </section>
+    </div>
+  </div>
+</body>
+<script src="prediction.js"></script>
+</html>
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,394 @@
+/* start of global styles */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f3f6ff;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+header {
+  height: 144px;
+  width: 100%;
+background-color: #f3f6ff;
+  display: flex;
+  font-family: "Roboto";
+  padding: 0px 50px;
+  justify-content: space-between;
+}
+header nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 40px;
+}
+header a {
+  color: #10104e;
+
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  cursor: pointer;
+  height: fit-content;
+}
+.active {
+  color: #38b6f8;
+}
+header nav a:hover {
+  color: #085a45; /* Change the hover color to your preferred color */
+}
+header img {
+  max-width: 150px;
+}
+button {
+  color: #f3f6ff;
+  font-size: 20px;
+  width: 290px;
+  height: 70px;
+  border: none;
+  border-radius: 50px;
+  background: #243660;
+  cursor: pointer;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+}
+#start-btn:hover {
+  background-color: #044938; /* Darker shade on hover */
+}
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+form div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 14px;
+}
+form input,
+select,
+textarea {
+  border-radius: 8px;
+  border: 0.5px solid #99000017;
+  height: 45px;
+  width: 400px;
+  font-size: large;
+  padding: 10px;
+  outline: none;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  font-family: "Sorts Mill Goudy";
+}
+textarea {
+  height: 130px;
+  max-width: 400px;
+  max-height: 130px;
+}
+form input:focus,
+textarea:focus {
+  border: 1px solid #243660;
+}
+form button,
+.small {
+  font-family: "Sorts Mill Goudy";
+  font-size: 18px;
+  font-weight: 400;
+  width: 159px;
+  height: 39px;
+  cursor: pointer;
+}
+hr {
+  border-top: 1px solid #d9d9d99c;
+  width: 99%;
+  background: rgba(217, 217, 217, 0.61);
+}
+/* end of global styles */
+
+/* start home page styles */
+main {
+  height: 618px;
+  background: linear-gradient(
+    177deg,
+    #a6f4ff 2.82%,
+    rgba(15, 39, 49, 0) 97.39%
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px;
+  gap: 60px;
+  font-family: "Sorts Mill Goudy", serif;
+}
+main div {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 40px;
+}
+main p {
+  font-size: larger;
+}
+main img {
+  width: 392px;
+  height: 273.478px;
+}
+
+footer {
+  background-color: rgb(29, 29, 72);
+  width: 100%;
+  height: 257px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+  color: white;
+  font-family: "Roboto", sans-serif;
+}
+footer > div {
+  display: flex;
+  gap: 14px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+footer > div div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+footer a {
+  font-size: larger;
+  cursor: pointer;
+}
+footer small {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 14px 0px;
+  background-color: #050019;
+}
+.popup-back {
+  visibility: hidden;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background: rgba(217, 217, 217, 0.61);
+}
+.box {
+  background: #fff;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 80px;
+  color: #243660;
+  font-size: 24px;
+  gap: 30px;
+  position: relative;
+}
+.box h2 {
+  font-size: 38px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+svg {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  cursor: pointer;
+}
+form a {
+  width: 159px;
+  height: 39px;
+  display: block;
+  padding-top: 8px;
+}
+#submitBt:hover{
+  background-color: #044938;
+}
+/*end home page styles*/
+
+/*start prediction page styles*/
+.prediction {
+  width: 60rem;
+  height: fit-content;
+  margin: 50px;
+  padding: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 80px;
+  border-radius: 20px;
+  border: 1px solid #000;
+}
+#prophesyCost:hover {
+  background-color: #085a45;
+}
+.small:hover{
+  background-color: #085a45;
+}
+.prediction form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 80px;
+}
+.welcome {
+  font-family: "Roboto";
+  font-size: 28px;
+  margin-top: 40px;
+  margin-left: 80px;
+  color: #243660;
+  display: flex;
+  gap: 14px;
+}
+.prediction form > div {
+  flex-direction: row;
+  gap: 80px;
+
+  align-items: center;
+  font-size: large;
+}
+.prediction input,
+select {
+  width: 300px;
+}
+.prediction label {
+  color: #243660;
+
+  font-family: "Sorts Mill Goudy";
+  font-size: 20px;
+
+  font-weight: 300;
+}
+.red::after {
+  content: "*";
+  color: #c61919;
+  font-size: 28px;
+}
+.radio {
+  display: flex;
+  width: 98%;
+  justify-content: space-between;
+}
+input[type="radio"] {
+  height: 19px;
+  width: 19px;
+  padding: 0;
+  margin: 0;
+  accent-color: #243660;
+}
+.radio > div > div {
+  display: flex;
+  align-items: start;
+  gap: 100px;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.sexOption,
+.smokerOption {
+  font-size: 10px;
+  flex-direction: row;
+  display: flex;
+}
+.sexOption label,
+.smokerOption label {
+  font-size: 20px;
+}
+/* start result section*/
+.result {
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  display: none;
+  color: #243660;
+}
+
+.result p {
+  font-size: 29px;
+  font-weight: 400;
+}
+.result H2 {
+  font-family: "Almarai", sans-serif;
+  font-size: 24px;
+}
+.result div {
+  display: flex;
+  gap: 200px;
+}
+.num {
+  font-family: "Almarai", sans-serif;
+  font-size: 25px;
+  color: #085a45;
+}
+.num2 {
+  font-family: "Almarai", sans-serif;
+  font-size: 25px;
+  color: #085a45;
+}
+.amount {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.amount h2 {
+  position: absolute;
+}
+/*end prediction page styles*/
+/* start contact styles*/
+.contactCont {
+  background-color: #f3f6ff;
+  height: 100vh;
+  width: 100vw;
+}
+#subBtn:hover{
+  background-color: #085a45;
+}
+.contactCont header {
+  background-color: #f3f6ff;
+}
+.cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+}
+.contactTitle {
+  color: #243660;
+  font-family: "Sorts Mill Goudy";
+  font-size: 30px;
+  text-align: left;
+  transform: translateX(-40vw);
+}
+
+#submit:hover{
+  background-color: #085a45;
+}
